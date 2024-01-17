@@ -1,12 +1,12 @@
 # Proyecto Individual 2 -Siniestros Viales en CABA 
 
-## Introducción⚠️ 🗺️
+## Introducción
 
 ¡Bienvenido al proyecto de análisis de datos sobre siniestros viales en la Ciudad de Buenos Aires! En este proyecto, asumiremos el rol de un Data Analyst, colaborando con el Observatorio de Movilidad y Seguridad Vial (OMSV) bajo la órbita de la Secretaría de Transporte del Gobierno de la Ciudad Autónoma de Buenos Aires.
 
 La tarea es crucial: analizar un conjunto de datos sobre siniestros viales ocurridos entre 2016 y 2021 con el objetivo de proporcionar información valiosa que permita a las autoridades locales tomar medidas efectivas para reducir la cantidad de víctimas fatales en estos incidentes.
 
-## Contexto⚠️ 🚑
+## Contexto
 
 Los siniestros viales, eventos que involucran vehículos en las vías públicas, son una preocupación significativa en una ciudad tan dinámica como Buenos Aires. La alta densidad de tráfico y población aumenta la probabilidad de estos incidentes, que van desde colisiones entre vehículos hasta atropellos y caídas de vehículos. Los impactos abarcan desde daños materiales hasta lesiones graves o incluso fatales para los involucrados, afectando la seguridad de residentes y visitantes, así como la infraestructura vial y los servicios de emergencia.
 
@@ -14,9 +14,9 @@ En Argentina, los siniestros viales representan una causa importante de muertes 
 
 El OMSV te ha proporcionado un conjunto de datos en formato xlsx que detalla los siniestros viales con resultado de homicidio ocurridos en la Ciudad de Buenos Aires durante el periodo mencionado. La tarea es analizar este conjunto de datos para extraer información clave que respalde la toma de decisiones de las autoridades locales. 
 
-## Desarrollo⚠️ 🚓
+## Desarrollo
 
-### Datos🚨
+### Datos
 
 Para este proyecto se trabajó con la __Bases de Víctimas Fatales en Siniestros Viales__ que se encuentra en formato de Excel y contiene dos pestañas de datos:
 
@@ -33,7 +33,7 @@ __Proceso de EDA (Análisis Exploratorio de los datos):__
 
 Una vez que los datos están limpios, es momento de revisar las relaciones que existen entre las variables numéricas y categóricas de los datasets, encontrar si hay presencia de outliers o anomalías (que no tienen que ser errores necesariamente), y se verificó si hay algún patrón o conocimiento que sirva en un análisis posterior. [EDA](EDA.ipynb)
 
-### Análisis de los datos 🚨
+### Análisis de los datos 
 
 - Se analizan las variables numéricas del dataset su correlación por medio de una matriz, donde se encuentra una relación positiva entre las variables *Edad y Hora*
 - La mayoria de los siniestros resultan con una víctima fatal, rara vez involucran 3 víctimas.
@@ -42,8 +42,6 @@ __- Análisis Temporal:__
 
 En el transcurso de los años, los accidentes con víctimas fatales muestran: para el período 2016-2018 una tendencia alta y estacionaria, que luego se convierte en bajista (teniendo en cuenta el comienzo de la Pandemia por COVID19 durante 2020); puede verse un pico de siniestros durante Diciembre de 2021 y se retoma la tendencia bajista. Los meses con más victimas fatales son Diciembre (86) y Agosto(71); mientras que los días de la semana Sábado (114) y Domingo (114) tienen la mayor cantidad de víctimas.
 
-![Textoo](mapa_calor.png)
-
 Los horarios críticos de los siniestros viales están relacionados con los momentos del ingreso a la jornada laboral (5-9h), el momento del almuerzo (12-14h) y la salida del trabajo (17-18h). Mientras que los fines de semana están relacionados con las salidas nocturnas (4-7h)
 
 
@@ -51,15 +49,10 @@ __Análisis Demográfico y Geográfico:__
 
 Edad de las víctimas : La distribución del rango etario de víctimas, resulta para los *Masculinos* entre 20 y 40 años; mientras que para los *Femeninos* entre 40, 60 y 80 años.
 
-![Textoo](relacion_sexo.png)
-
 El patrón de correlación Edad y Hora de las variables númericas se analiza agregando la variable Sexo, de lo que resulta la conclusión que los horarios en que los accidentes son protagonizados por Masculinos es al horario de ingreso y egreso laboral, mientras que para los Femeninos es en el horario cercano al almuerzo.
-
-![Textoo](relacion_edad_hora_sexo.png)
 
 Utilizando la herramienta GeoPandas y extrayendo los datos de los detalles de los Barrios que conforman las 15 comunas de CABA; resulta el análisis de las coordenadas geográficas y comunas de CABA, que demostro que las comunas con __más siniestos son las 1, 4 , 9, 8 y 7.__
 
-![Textoo](top5_comunas.png)
 
 Los siniestros se producen en 62% de los casos en el tipo de calle Avenida y en el 82% de los casos se corresponden con un Cruce entre calles. Lo que resulta un patrón que se repite a lo largo de los años.
 
@@ -67,12 +60,11 @@ __- Análisis Participativo:__
 
 Para el caso de la variable Participantes de los sinietros; se analiza a Acusados, como el vehículo que tiene la responsabilidad del hecho, de lo que resultan los Autos, Colectivos y Vehículos de Carga como mayores involucrados. Para el análisis de las Victimas, que en momento del accidente resultaban mayormente en el Rol de Conductor o Peatón; y el siniestro se produce en la mayoría de los casos en Motos y luego como Peaton.
 
-## Indicadores de Rendimiento Clave KPI⛔
+## Indicadores de Rendimiento Clave KPI
 
-Una vez finalizado el Análisis Exploratorio, se utiliza el dataset resultante Siniestros y los extraidos de la página oficial de CABA con los datos de las comunas Comunas; para trabajar en la herramienta PowerBi a fin de obtener los KPI (Indicadores de Rendimiento Clave) y un dashboard de presentación del informe y Visualización de datos.
+Una vez finalizado el Análisis Exploratorio, se utiliza el dataset resultante Siniestros y los extraidos de la página oficial de CABA con los datos de las [comunas](comunas.xlsx) ; para trabajar en la herramienta PowerBi a fin de obtener los KPI (Indicadores de Rendimiento Clave) y un dashboard de presentación del informe y Visualización de datos.
 
-KPI Propuestos
-# IMEGEN
+__KPI Propuestos__
 
 __- Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior__
 
@@ -90,11 +82,9 @@ __- Reducir en un 15% la cantidad de accidentes con víctimas fatales de peatone
 
 Se define la cantidad de accidentes fatales de peatones en siniestros viales como el número absoluto de accidentes fatales en los que estuvieron involucradas víctimas que circulaban a pie en un determinado periodo temporal. Su fórmula para medir la evolución de los accidentes mortales con víctimas peaton es: (Número de accidentes mortales con víctimas peaton en el semestre anterior - Número de accidentes mortales con víctimas peaton en el semestre actual) / (Número de accidentes mortales con víctimas peaton en el semestre anterior) * 100
 
-Cantidad de Accidentes Mortales en Moto = Tomando la variable Victima que se iguale a el campo [PEATON] del dataset
+Cantidad de Accidentes Mortales en Moto = Tomando la variable Victima que se iguale a el campo [PEATON] del dataset.
 
-# IMAHEN
-
-## Conclusiones⚠️ 🚧
+## Conclusiones
 
 A partir del análisis exahustivo de los datos y su posterior visualización a través del dashboard en PowerBi; se concluye que las víctimas fatales por siniestros de tránsito entre los años 2016 a 2021 fueron 717 personas. Que la franja horaria de mayor problemática es la del ingreso laboral (5-9h), la del almuerzo (12-14h)y la del regreso a casa(17-18h); aunque durante los fines de semana (Sábado y Domingo), los accidentes se manifiestan en los horarios de salidas nocturnas (3-7h). Las víctimas son en un 76% Masculinas, y sus edades entre el rango etario de 20-40 años. Además en los siniestros de Masculinos los mayores casos se dan en su rol como Conductor. Los tipos de vehículos más frecuentes con Víctimas son las Motos y luego los Peatones; mientras que para los Acusados los vehículos más frecuentes son Autos, Colectivos y cargas. En cuanto a el lugar donde se producen los siniestros, las Avenidas a lo largo de los años han sido los espacios de mayor cantidad de siniestros; y en Cruce mayor a las calles. Se observo un patrón en relación con la variable Edad, Hora y Sexo. Donde los Masculinos de entre 20 a 40 años y en los horarios de entrada y salida laboral o para el caso de los fines de semana en horas de salidas nocturnas.
 
