@@ -91,6 +91,26 @@ A partir del análisis exahustivo de los datos y su posterior visualización a t
 
 Asi se concluye que deberían mejorarse las señales y controles en las Avenidas sobre todo en las comunas 1 y 4 de CABA. Que podrían generarse campañas de prevención dirigidas a los Masculinos de entre 20 y 40 años .
 
+## Estructura del Repositorio
+
+1. /Archivos_note: - Esta carpeta contiene los Jupyter Notebooks (.ipynb) con el código completo y bien comentado.
+
+- ETL: Este libro contiene todo el paso a paso de las Extracciones, Transformaciones y Cargas de datos. Pre-procesado y Calidad del Dato.
+- EDA: En éste archivo encontrarás todo el proceso de Analítica Predictiva y Prescriptiva de las diferentes variables de nuestro conjunto de datos.
+- functions: De este libro generé una copia .py para que fuese ejecutable. Acá encontrarás una serie de funciones que regularmente usaba desde el ETL ó el EDA entonces lo convertí en un código reutilizable.
+
+2. /Dataset - Almacena los datasets fuentes y los resultantes despues del ETL y EDA, en una versión limpia y procesada.
+- homicidios y lesiones: Archivo en formato xlsx. Son nuestra fuente de datos original.
+- siniestos_limpio: Es el archivos resultantes de la limpieza del ETL, en formato csv.
+- comunas: Archivo en formato csv donde se integran todos los datos de las comunas con sus nombres.
+
+3. /comunas: - Carpetas de los ejecutables para poder utilizar geopandas.
+
+4. /imagenes: - Imagenes que se utilizaron para desarrollar el proyecto.
+
+## Autor
+
+__Barrionuevo, Gabriela Soledad.__
 
 
 
