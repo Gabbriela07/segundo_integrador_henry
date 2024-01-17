@@ -1,4 +1,4 @@
-![Portada](portada_larga.png)
+![Portada](Imagenes\portada_larga.png)
 # Proyecto Individual 2 -Siniestros Viales en CABA 
 
 ## Introducción
